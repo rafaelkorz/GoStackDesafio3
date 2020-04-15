@@ -18,7 +18,7 @@ export default function App() {
       api.get('repositories')
       .then(response => {setRepositories(response.data)})
       .catch((error) => console.warn("fetch error:", error));
-    }, [repositories]);
+    }, []);
 
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`)
